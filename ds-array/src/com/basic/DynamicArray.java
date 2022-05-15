@@ -28,6 +28,9 @@ public class DynamicArray {
     }
 
     public int delete(int index){
+        if(index>size){
+            return -1;
+        }
         int delEle = this.arr[index];
         for(var i=index;i<this.size;i++){
             if(i+1 == this.size){
